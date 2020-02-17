@@ -1,0 +1,1 @@
+kafka-2-strom.tetrationcloud.com:443,kafka-3-strom.tetrationcloud.com:443,kafka-1-strom.tetrationcloud.com:443
