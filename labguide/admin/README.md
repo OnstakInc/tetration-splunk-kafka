@@ -1,4 +1,4 @@
-# Cisco Tetration - Hands-On Lab
+# Cisco Tetration - Splunk - Kafka - Integration Guide
   
 ## Administrative Guide to Setup
 
@@ -8,4 +8,4 @@
 
 
 
-| [Return to Table of Contents](https://onstakinc.github.io/cisco-tetration-hol/labguide/) | [Go to Top of the Page](https://onstakinc.github.io/cisco-tetration-hol/labguide/module27/) | 
+| [Return to Table of Contents](https://onstakinc.github.io/tetration-splunk-kafka/labguide/) | [Go to Top of the Page](https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/) | 
