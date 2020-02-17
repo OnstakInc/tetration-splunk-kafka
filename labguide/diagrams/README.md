@@ -7,7 +7,7 @@ You may prefer to utilize [this interactive LucidChart diagram](https://www.luci
 
 <div class="diagram" id="diagram-001"><a href="#diagram-001" style="font-weight:bold">Diagram 001</a></div>  
 
-<a href="https://onstakinc.github.io/tetration-splunk-kafka/labguide/diagrams/images/diagrams_001.png"><img src="https://onstakinc.github.io/cisco-tetration-hol/labguide/diagrams/images/diagrams_001.png" style="width:100%;height:100%;"></a>  
+<a href="https://onstakinc.github.io/tetration-splunk-kafka/labguide/diagrams/images/diagrams_001.png"><img src="https://onstakinc.github.io/tetration-splunk-kafka/labguide/diagrams/images/diagrams_001.png" style="width:100%;height:100%;"></a>  
   
 
 
