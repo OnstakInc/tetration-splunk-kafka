@@ -37,7 +37,8 @@
 <a href="#section-03--step-004" style="font-weight:bold">Step 004 - Deploy</a>  
 <a href="#section-03--step-005" style="font-weight:bold">Step 005 - Verify</a>  
 <a href="#section-03--step-006" style="font-weight:bold">Step 006 - Initiate Connector</a>  
-<a href="#section-03--step-007" style="font-weight:bold">Information on ReST API</a> 
+<a href="#section-03--step-007" style="font-weight:bold">Information on ReST API</a>  
+
 ---
 
 #### Live Interactive Diagram
@@ -71,7 +72,7 @@ In our case,
 
 <div class="step" id="section-01--step-004"><a href="#section-01--step-004" style="font-weight:bold">Step 004</a></div>  
 
-After installation is complete, you must create the admin credentials manually without starting Splunk. To do this, open the user.conf file with your favourite editor. Here we show vi being used:  
+After installation is complete, you must create the admin credentials manually without starting Splunk. To do this, open the user.conf file with your favourite editor. Here we show vi being used.  
 
 `vi/opt/splunk/etc/system/local/user-seed.conf`  
 
@@ -81,11 +82,13 @@ Add the following lines in the file, save, and exit.
 [user_info]
 USERNAME = admin 
 PASSWORD = your password
-```
+```   
+
 
 <div class="step" id="section-01--step-005"><a href="#section-01--step-005" style="font-weight:bold">Step 005</a></div>  
 
-Start your instance of Splunk with following command:
+Start your instance of Splunk with following command:  
+
 `/opt/splunk/bin/splunk start`
 
 <div class="step" id="section-01--step-006"><a href="#section-01--step-006" style="font-weight:bold">Step 006</a></div>  
@@ -100,7 +103,7 @@ Your Splunk machine is now ready to go.
 ---
 #### Section 2 - Splunk Connect for Kafka Installation
 
-##### System Requirements
+###### System Requirements
 > A Kafka Connect Environment running Kafka version 1.0.0 or later.
 >   Java 8 or later.
 >   Splunk platform environment of version 6.5 or later.
@@ -111,79 +114,79 @@ Your Splunk machine is now ready to go.
 Start creating HEC token by following the instructions provided below with images.
 From any browser visit `http://your_public_ip:8000` and provide your credentials to login.
 
-<a href="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-001.png"><img src="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-001.png" style="width:100%;height:100%;"></a>  
+<a href="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-001.png"><img src="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-001.png" style="width:100%;height:100%;"></a>  
   
 
 <div class="step" id="section-02--step-002"><a href="#section-02--step-002" style="font-weight:bold">Step 002</a></div>  
 
 After login, click Settings, then click Data inputs as shown in the image below.
 
-<a href="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-002.png"><img src="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-002.png" style="width:100%;height:100%;"></a>  
+<a href="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-002.png"><img src="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-002.png" style="width:100%;height:100%;"></a>  
 
 <div class="step" id="section-02--step-003"><a href="#section-02--step-003" style="font-weight:bold">Step 003</a></div>  
 
 Next, click on HTTP Event Collector. 
 
-<a href="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-003.png"><img src="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-003.png" style="width:100%;height:100%;"></a>  
+<a href="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-003.png"><img src="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-003.png" style="width:100%;height:100%;"></a>  
 
 <div class="step" id="section-02--step-004"><a href="#section-02--step-004" style="font-weight:bold">Step 004</a></div>  
 
 Before start creating a New Token click Global Setting.
 
-<a href="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-004.png"><img src="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-004.png" style="width:100%;height:100%;"></a>  
+<a href="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-004.png"><img src="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-004.png" style="width:100%;height:100%;"></a>  
   
 <div class="step" id="section-02--step-005"><a href="#section-02--step-005" style="font-weight:bold">Step 005</a></div>  
 
 Here you will select Enabled for All Tokens and verify the port is set to 8088. Click Save. 
 
-<a href="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-005.png"><img src="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-005.png" style="width:100%;height:100%;"></a>  
+<a href="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-005.png"><img src="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-005.png" style="width:100%;height:100%;"></a>  
 
 <div class="step" id="section-02--step-006"><a href="#section-02--step-006" style="font-weight:bold">Step 006</a></div>  
 
 Now we will create our New Token by clicking it.
 
-<a href="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-006.png"><img src="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-006.png" style="width:100%;height:100%;"></a>  
+<a href="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-006.png"><img src="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-006.png" style="width:100%;height:100%;"></a>  
   
 <div class="step" id="section-02--step-007"><a href="#section-02--step-007" style="font-weight:bold">Step 007</a></div>  
 
 Give your token any Name and according to your need you can enable or disable Indexer acknowledgement and then click Next.
 
-<a href="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-007.png"><img src="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-007.png" style="width:100%;height:100%;"></a>  
+<a href="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-007.png"><img src="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-007.png" style="width:100%;height:100%;"></a>  
 
 
 <div class="step" id="section-02--step-008"><a href="#section-02--step-008" style="font-weight:bold">Step 008</a></div>  
 
 Next, click Create a new index.
 
-<a href="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-008.png"><img src="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-008.png" style="width:100%;height:100%;"></a>  
+<a href="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-008.png"><img src="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-008.png" style="width:100%;height:100%;"></a>  
   
  
 <div class="step" id="section-02--step-009"><a href="#section-02--step-009" style="font-weight:bold">Step 009</a></div>  
 
 Simple add a Name for your index and click Save. You can leave other options as default.
 
-<a href="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-009.png"><img src="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-009.png" style="width:100%;height:100%;"></a>  
+<a href="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-009.png"><img src="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-009.png" style="width:100%;height:100%;"></a>  
   
 
 <div class="step" id="section-02--step-010"><a href="#section-02--step-010" style="font-weight:bold">Step 010</a></div>  
 
 Select your created index and make sure it appears in Selected item(s) box and click Review.
 
-<a href="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-010.png"><img src="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-010.png" style="width:100%;height:100%;"></a>  
+<a href="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-010.png"><img src="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-010.png" style="width:100%;height:100%;"></a>  
  
 
 <div class="step" id="section-02--step-011"><a href="#section-02--step-011" style="font-weight:bold">Step 011</a></div>  
 
 Review your setting and click Submit to create your token.
 
-<a href="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-011.png"><img src="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-011.png" style="width:100%;height:100%;"></a>  
+<a href="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-011.png"><img src="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-011.png" style="width:100%;height:100%;"></a>  
   
 
 <div class="step" id="section-02--step-012"><a href="#section-02--step-012" style="font-weight:bold">Step 012</a></div>  
 
 Here your token is created you can copy your Token Value and can use in your Rest Api. You should now be able to begin searching .
 
-<a href="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-012.png"><img src="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_2-012.png" style="width:100%;height:100%;"></a>  
+<a href="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-012.png"><img src="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_2-012.png" style="width:100%;height:100%;"></a>  
 
 ---
 #### Section 3 - Connector Installation and Configuration
@@ -191,13 +194,13 @@ Here your token is created you can copy your Token Value and can use in your Res
 
 Visit https://github.com/splunk/kafka-connect-splunk/releases and download the latest `splunk-kafka-connect-[version].jar` release.
 
-<a href="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_3-001.png"><img src="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_3-001.png" style="width:100%;height:100%;"></a>  
+<a href="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_3-001.png"><img src="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_3-001.png" style="width:100%;height:100%;"></a>  
   
 <div class="step" id="section-03--step-002"><a href="#section-03--step-002" style="font-weight:bold">Step 002</a></div>  
   
 Create a directory to store your Kafka Connect Connector. This will be used for your `plugin.path` setting.
 
-<a href="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_3-002.png"><img src="https://onstakinc.github.io/cisco-tetration-hol/labguide/admin/images/admin_3-002.png" style="width:100%;height:100%;"></a>  
+<a href="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_3-002.png"><img src="https://onstakinc.github.io/tetration-splunk-kafka/labguide/admin/images/admin_3-002.png" style="width:100%;height:100%;"></a>  
 
 
 <div class="step" id="section-03--step-003"><a href="#section-03--step-003" style="font-weight:bold">Step 003</a></div>  
