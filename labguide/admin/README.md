@@ -273,24 +273,24 @@ curl -s 10.0.1.6:8083/connectors -X POST -H “Content-Type:application/json” 
 
 Following is the information about the REST API.  
 
-i.	name: Connector name. A consumer group with this name will be created with tasks to be distributed evenly across the connector cluster nodes.  
+i.	`name`  Connector name. A consumer group with this name will be created with tasks to be distributed evenly across the connector cluster nodes.  
 
-ii.	connector.class: The Java class used to perform connector jobs. Keep the default unless you modify the connector.  
+ii.	`connector.class`  The Java class used to perform connector jobs. Keep the default unless you modify the connector.  
 
-iii.	tasks.max: The number of tasks generated to handle data collection jobs in parallel. The tasks will be spread evenly across all Splunk Kafka Connector nodes.  
+iii.	`tasks.max`  The number of tasks generated to handle data collection jobs in parallel. The tasks will be spread evenly across all Splunk Kafka Connector nodes.  
 
 iv.	topics: Comma separated list of Kafka topics for Splunk to consume.  
 
-v.	splunk.hec.uri: Splunk HEC URIs. Either a comma separated list of the FQDNs or IPs of all Splunk indexers, or a load balancer. If using the former, the connector will load balance to indexers using round robin
+v.	`splunk.hec.uri`  Splunk HEC URIs. Either a comma separated list of the FQDNs or IPs of all Splunk indexers, or a load balancer. If using the former, the connector will load balance to indexers using round robin
 vi.	splunk.hec.token: Splunk HTTP Event Collector token.  
 
-vii.	splunk.hec.ack.enabled: Valid settings are true or false. When set to true the Splunk Kafka Connector will poll event ACKs for POST events before check-pointing the Kafka offsets. This is used to prevent data loss, as this setting implements guaranteed delivery.  
+vii.	`splunk.hec.ack.enabled`  Valid settings are true or false. When set to true the Splunk Kafka Connector will poll event ACKs for POST events before check-pointing the Kafka offsets. This is used to prevent data loss, as this setting implements guaranteed delivery.  
 
-viii.	splunk.hec.raw: Set to true in order for Splunk software to ingest data using the the /raw HEC endpoint. false will use the /event endpoint.  
+viii.	`splunk.hec.raw`  Set to true in order for Splunk software to ingest data using the the /raw HEC endpoint. false will use the /event endpoint.  
 
-ix.	splunk.hec.json.event.enrichment: Only applicable to /event HEC endpoint. This setting is used to enrich raw data with extra metadata fields. It contains a comma separated list of key value pairs. The configured enrichment metadata will be indexed along with raw event data by Splunk software. Note: Data enrichment for /event HEC endpoint is only available in Splunk Enterprise 6.5 and above.  
+ix.	`splunk.hec.json.event.enrichment`  Only applicable to /event HEC endpoint. This setting is used to enrich raw data with extra metadata fields. It contains a comma separated list of key value pairs. The configured enrichment metadata will be indexed along with raw event data by Splunk software. Note: Data enrichment for /event HEC endpoint is only available in Splunk Enterprise 6.5 and above.  
 
-x.	splunk.hec.track.data: Valid settings are true or false. When set to true, data loss and data injection latency metadata will be indexed along with raw data
+x.	`splunk.hec.track.data`  Valid settings are true or false. When set to true, data loss and data injection latency metadata will be indexed along with raw data
 
 
 ---
