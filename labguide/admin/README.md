@@ -255,8 +255,8 @@ curl -s 10.0.1.6:8083/connectors -X POST -H “Content-Type:application/json” 
 “config”: { 
 “connector.class”: “com.splunk.kafka.connect.SplunkSinkConnector”,
 “task.max”: “1”,
-“topics”: “test”,
-“splunk.indexes”: “test”,
+“topics”: “Kafka-Splunk-Token”,
+“splunk.indexes”: “tetration-kafka-events”,
 “splunk.sourcetypes”: “access_combined”,
 “splunk.hec.uri”: “http://54.224.99.155:8088”,
 “splunk.hec.token”: “c8926f55-2c9b-4e16-88a7-eba0a039998b”,
